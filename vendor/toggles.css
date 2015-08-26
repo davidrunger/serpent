@@ -1,0 +1,36 @@
+.toggle, .toggle-slide {
+  width: 60px;
+}
+
+.toggle {
+  float: left;
+}
+
+.toggle-label {
+  float: left;
+  margin-right: 5px;
+  font-weight: normal;
+}
+
+.toggle-slide {
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  direction: ltr;
+}
+.toggle-slide .toggle-on,
+.toggle-slide .toggle-off,
+.toggle-slide .toggle-blob {
+  float: left;
+}
+.toggle-slide .toggle-blob {
+  position: relative;
+  z-index: 99;
+  cursor: hand;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}

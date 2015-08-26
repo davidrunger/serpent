@@ -1,0 +1,222 @@
+html, body {
+  height: 100%;
+}
+
+html {
+  font-family: verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  background-image: url('images/background_snake.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+label:first-child {
+  margin-left: 0;
+}
+
+label {
+  float: left;
+  margin-left: 40px;
+}
+
+label > p {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #194A0C
+}
+
+td {
+  text-align: center;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto 10px;
+  padding-top: 20px;
+  height: 90px;
+  width: auto;
+}
+
+#board {
+  position: relative;
+  margin: 20px auto;
+  border: 3px solid black;
+  border-radius: 5px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b4e391+0,7ed13e+50,b4e391+100 */
+  background: #b4e391; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #b4e391 0%, #7ed13e 50%, #b4e391 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#b4e391), color-stop(50%,#7ed13e), color-stop(100%,#b4e391)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg,  #b4e391 0%,#7ed13e 50%,#b4e391 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  #b4e391 0%,#7ed13e 50%,#b4e391 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  #b4e391 0%,#7ed13e 50%,#b4e391 100%); /* IE10+ */
+  background: linear-gradient(135deg,  #b4e391 0%,#7ed13e 50%,#b4e391 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e391', endColorstr='#b4e391',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+#transparency {
+  background-color: rgba(255,255,255,0.8);
+  position: absolute;
+  left: 25px;
+  right: 25px;
+  top: 25px;
+  bottom: 25px;
+  border-radius: 12px;
+}
+
+.group:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.cell {
+  position: relative;
+  float: left;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border-radius: 35%;
+  box-sizing: border-box;
+}
+
+.cell.apple {
+  background-image: url("images/apple.png");
+  background-size: auto 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cell.snake-1 {
+  background: #1EAC17;
+  border: 2px solid #179217;
+}
+
+.cell.snake-2 {
+  background: #155811;
+  border: 2px solid #0A4E0A;
+}
+
+.cell.head {
+  background: green;
+  border: 2px solid #1A6F17;
+}
+
+.col-head {
+  padding: 0 25px;
+}
+
+.content {
+  width: 200px;
+  margin: 25px auto;
+}
+
+.controls {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.controls p {
+  font-weight: normal;
+  font-family: monospace;
+}
+
+.eye {
+  position: absolute;
+  top: 2px;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+}
+
+.eye.left {
+  left: 5px;
+}
+
+.eye.right {
+  left: 15px;
+}
+
+.head.E {
+  transform: rotate(90deg);
+}
+
+.head.E .eye {
+  transform: rotate(-90deg);
+}
+
+.head.S {
+  transform: rotate(180deg);
+}
+
+.head.S .eye {
+  transform: rotate(-180deg);
+}
+
+.head.W {
+  transform: rotate(-90deg);
+}
+
+.head.W .eye {
+  transform: rotate(90deg);
+}
+
+.keys {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 250px;
+  z-index: 5;
+}
+
+.message p {
+  font-size: 28px;
+}
+
+.player {
+  font-size: 20px;
+}
+
+.pupil {
+  height: 10px;
+  /* manipulate with JS: transform: rotate(690deg); */
+}
+
+.pupil:before {
+  display: block;
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 2.5px;
+}
+
+.score {
+  padding: 8px;
+  font-size: 24px;
+}
+
+.scores h3 {
+  margin-bottom: 5px;
+}
+
+.score-table {
+  display: inline-block;
+}
