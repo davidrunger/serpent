@@ -8,6 +8,10 @@
 * Single-player option
 * Spinner to adjust intelligence of AI (probably not; would complicate leaderboard)
 * Have AI consider whether it's going to run into a snake when moving
+* Shepherd tour?
+* favicon
+* remove bug caused when changing speed during countdown (or something like that)
+* rewrite in React
 
 # Done
 
