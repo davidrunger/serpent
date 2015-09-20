@@ -12,6 +12,7 @@
 * favicon
 * remove bug caused when changing speed during countdown (or something like that)
 * rewrite in React
+* requestAnimationFrame?
 
 # Done
 
