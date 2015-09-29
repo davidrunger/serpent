@@ -13,6 +13,12 @@
     return true;
   };
 
+  Util.includesArray = function (arrayOfArrays, array) {
+    return arrayOfArrays.some(function (arrayItem) {
+      return Util.arraysEqual(arrayItem, array);
+    });
+  },
+
   Util.sample = function (array) {
     var length = array.length;
     var index = Math.floor(Math.random() * length);

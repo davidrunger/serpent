@@ -7,8 +7,6 @@
 * Allow multi-player over the Internet
 * Single-player option
 * Spinner to adjust intelligence of AI (probably not; would complicate leaderboard)
-* Have AI consider whether it's going to run into a snake when moving
-* Shepherd tour?
 * favicon
 * remove bug caused when changing speed during countdown (or something like that)
 * rewrite in React
@@ -24,3 +22,4 @@
 * Use apple graphic instead of simple red circle
 * Better styling
 * Build AI
+* Have AI consider whether it's going to run into a snake when moving

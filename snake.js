@@ -111,7 +111,11 @@
   };
 
   Snake.prototype.nextPos = function () {
-    var diff = Snake.DIFFS[this.dir];
+    return this.nextPosInDir(this.dir);
+  };
+
+  Snake.prototype.nextPosInDir = function (dir) {
+    var diff = Snake.DIFFS[dir];
     return this.game.wrap(Util.vectorSum(this.head(), diff));
   };
 
