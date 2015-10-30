@@ -1,6 +1,5 @@
 # Serpent To-Do's
 
-* Draw frame just before collision but don't have snakes cross onto each other
 * Instructions
 * Leaderboard (first to 10 wins)
 * Resolve ties as ties
