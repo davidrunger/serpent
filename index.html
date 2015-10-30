@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <title>Serpent</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="vendor/spinner.css">
     <link rel="stylesheet" href="vendor/toggles.css">
     <link rel="stylesheet" href="vendor/toggles-soft.css">
+    <link rel="stylesheet" href="vendor/introjs.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="vendor/spinner.js"></script>
     <script src="vendor/toggles.js"></script>
+    <script src="vendor/intro.min.js"></script>
     <script src="util.js"></script>
     <script src="snake.js"></script>
     <script src="ai.js"></script>
@@ -19,7 +22,9 @@
     <main id="transparency">
       <img id="logo" src="images/serpent_logo.gif" alt="serpent logo">
 
-      <section class="controls group">
+      <button class="instructions">Instructions</button>
+
+      <section class="controls group" data-step="5" data-intro="Customize the game settings to your liking. Now have fun playing Serpent!">
         <label>
           <p>Speed</p>
           <input type="number" class="speed" min="1" max="50" value="8">
@@ -36,11 +41,11 @@
         </label>
       </section>
 
-      <section id="board"></section>
+      <section id="board" data-step="1" data-intro="Goal: Eat the apples without running into yourself or your oponent. By the way, you can navigate this tour with the arrow keys."></section>
 
       <section class="scores">
         <table class="score-table">
-          <tr>
+          <tr data-step="2" data-position="top" data-intro="Toggle the AIs on/off here. Also, note the keyboard controls for when the AI is off.">
             <th></th>
             <th class="col-head">
               <div class="player">Player 1</div>
@@ -59,13 +64,13 @@
               </div>
             </th>
           </tr>
-          <tr>
-            <th>Score this match</th>
+          <tr data-step="3" data-position="top" data-intro="When you eat an apple, it is recorded here. The first player to eat 4 apples wins the round.">
+            <th>Apples eaten this round</th>
             <td class="score score-1">0</td>
             <td class="score score-2">0</td>
           </tr>
-          <tr>
-            <th>Matches won</th>
+          <tr data-step="4" data-position="top" data-intro="Rounds won are recorded here. Win a round by eating 4 apples OR waiting for your opponent to run into you or himself.">
+            <th>Rounds won</th>
             <td class="score match-score-1">0</td>
             <td class="score match-score-2">0</td>
           </tr>
@@ -76,6 +81,9 @@
     <script>
       $('.toggle').toggles();
       $('input[type=number]').spinner();
+      $('.instructions').click(function () {
+        introJs().start();
+      });
 
       var game = new Serpent.Game($('#board'));
       game.start();

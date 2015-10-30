@@ -1,12 +1,10 @@
 # Serpent To-Do's
 
-* Instructions
 * Leaderboard (first to 10 wins)
 * Resolve ties as ties
 * Allow multi-player over the Internet
-* Single-player option
+* Single-player option (one snake only)
 * Spinner to adjust intelligence of AI (probably not; would complicate leaderboard)
-* favicon
 * rewrite in React
 * requestAnimationFrame?
 
@@ -22,3 +20,5 @@
 * Build AI
 * Have AI consider whether it's going to run into a snake when moving
 * remove bug caused when changing speed during countdown (fixed itself)
+* Instructions
+* favicon

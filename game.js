@@ -44,7 +44,7 @@
   Game.CELL_SIZE = 30;
   Game.EYE_SIZE = 10;
   Game.INTERVAL = 125;
-  Game.ROWS = 10;
+  Game.ROWS = 7;
   Game.COLS = 15;
   Game.ARROWDIRS = {
     37: 'W',
