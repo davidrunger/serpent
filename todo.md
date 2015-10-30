@@ -1,14 +1,13 @@
 # Serpent To-Do's
 
+* Draw frame just before collision but don't have snakes cross onto each other
 * Instructions
 * Leaderboard (first to 10 wins)
 * Resolve ties as ties
-* Draw frame just before collision but don't have snakes cross onto each other
 * Allow multi-player over the Internet
 * Single-player option
 * Spinner to adjust intelligence of AI (probably not; would complicate leaderboard)
 * favicon
-* remove bug caused when changing speed during countdown (or something like that)
 * rewrite in React
 * requestAnimationFrame?
 
@@ -23,3 +22,4 @@
 * Better styling
 * Build AI
 * Have AI consider whether it's going to run into a snake when moving
+* remove bug caused when changing speed during countdown (fixed itself)

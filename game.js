@@ -23,8 +23,8 @@
     var ai2On = JSON.parse(localStorage.getItem('ai2On'));
     this.ai1On = ai1On === null ? true : ai1On;
     this.ai2On = ai2On === null ? false : ai2On;
-    if (this.ai1On) { $('.player-1-ai').click() }
-    if (this.ai2On) { $('.player-2-ai').click() }
+    if (this.ai1On) { $('.player-1-ai').click(); }
+    if (this.ai2On) { $('.player-2-ai').click(); }
 
     this.step();
 
@@ -86,13 +86,14 @@
     var snake1ArrowKeys = [65, 68, 83, 87];
     var snake2ArrowKeys = [37, 38, 39, 40];
     var key = event.which;
+    var newDir;
 
     if (snake1ArrowKeys.indexOf(key) > -1) {
       event.preventDefault();
 
       if (this.ai1On) { return; }
 
-      var newDir = Game.ARROWDIRS[key];
+      newDir = Game.ARROWDIRS[key];
       this.snake1.changeDir(newDir);
     }
     else if (snake2ArrowKeys.indexOf(key) > -1) {
@@ -100,7 +101,7 @@
 
       if (this.ai2On) { return; }
 
-      var newDir = Game.ARROWDIRS[key];
+      newDir = Game.ARROWDIRS[key];
       this.snake2.changeDir(newDir);
     }
   };
@@ -138,7 +139,9 @@
 
   Game.prototype.setApple = function () {
     var oldApple = this.apple;
-    oldApple && $('#' + oldApple[0] + '-' + oldApple[1]).removeClass('apple');
+    if (oldApple) {
+      $('#' + oldApple[0] + '-' + oldApple[1]).removeClass('apple');
+    }
     var apple = this.apple = this.randomApple();
     $('#' + apple[0] + '-' + apple[1]).addClass('apple');
   };
@@ -188,8 +191,8 @@
     this.snake1.alreadyChangedDir = false;
     this.snake2.alreadyChangedDir = false;
 
-    if (this.ai1On) { this.ai.turn(this.snake1); };
-    if (this.ai2On) { this.ai.turn(this.snake2); };
+    if (this.ai1On) { this.ai.turn(this.snake1); }
+    if (this.ai2On) { this.ai.turn(this.snake2); }
 
     // #some (rather than #forEach) allows breaking out of loop...
     [self.snake1, self.snake2].some(function (snake, i) {

@@ -39,10 +39,11 @@
     }
 
     var nextPos = this.nextPos();
+    var matchesWon;
 
     if (this.containsPos(nextPos) || (this.enemy() && this.enemy().containsPos(nextPos))) {
       var winner = this.enemy();
-      var matchesWon = parseInt($('.match-score-' + winner.id).text());
+      matchesWon = parseInt($('.match-score-' + winner.id).text());
       $('.match-score-' + winner.id).text(matchesWon + 1);
       this.game.restart('Player ' + winner.id + ' wins this round!');
       return true; // breaks loop in calling function
@@ -51,7 +52,7 @@
       this.turnsSinceEatingApple = 0;
       var score = parseInt($('.score-' + this.id).text()) + 1;
       if (score === 4) {
-        var matchesWon = parseInt($('.match-score-' + this.id).text());
+        matchesWon = parseInt($('.match-score-' + this.id).text());
         $('.match-score-' + this.id).text(matchesWon + 1);
         this.game.restart('Player ' + this.id + ' wins this round!');
       }
